@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EjercicioActividad12_Consolidación</string>
+
+    <string name="hora">Hora Local:  </string>
+    <string name="magnitud">Magnitud (Richter):  </string>
+    <string name="referencia">Referencia:  </string>
+    <string name="mapa">Mapa:  </string>
+    <string name="favorito">Favorito  </string>
+    <string name="titulo">Últimos Sismos en Chile</string>
+
+</resources>

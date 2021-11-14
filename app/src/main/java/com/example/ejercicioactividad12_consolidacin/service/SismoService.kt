@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 interface SismoService {
 
-    @GET
+    @GET(".")
     fun obtenerSismos(): Call<List<SismosModel>>
 
 }

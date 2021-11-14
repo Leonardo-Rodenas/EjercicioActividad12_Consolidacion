@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/listarFragment"
         android:name="com.example.ejercicioactividad12_consolidacin.ui.ListarFragment"
-        android:label="fragment_listar"
-        tools:layout="@layout/fragment_listar" >
+        android:label="Últimos sismos en Chile"
+        tools:layout="@layout/fragment_listar">
         <action
             android:id="@+id/action_listarFragment_to_detalleFragmentFragment"
             app:destination="@id/detalleFragmentFragment" />
@@ -17,8 +17,8 @@
     <fragment
         android:id="@+id/detalleFragmentFragment"
         android:name="com.example.ejercicioactividad12_consolidacin.ui.DetalleFragmentFragment"
-        android:label="fragment_detalle_fragment"
-        tools:layout="@layout/fragment_detalle_fragment" >
+        android:label="Detalle del Sismo Seleccionado"
+        tools:layout="@layout/fragment_detalle_fragment">
         <action
             android:id="@+id/action_detalleFragmentFragment_to_favoritoFragment"
             app:destination="@id/favoritoFragment" />
@@ -26,6 +26,6 @@
     <fragment
         android:id="@+id/favoritoFragment"
         android:name="com.example.ejercicioactividad12_consolidacin.ui.FavoritoFragment"
-        android:label="fragment_favorito"
+        android:label="Sismos Favoritos"
         tools:layout="@layout/fragment_favorito" />
 </navigation>

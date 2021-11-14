@@ -4,10 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ZeroX/AndroidStudioProjects/EjercicioActividad12_Consolidacin/app/src/main/res/layout/activity_main.xml" value="0.1921875" />
-        <entry key="..\:/Users/ZeroX/AndroidStudioProjects/EjercicioActividad12_Consolidacin/app/src/main/res/layout/fragment_detalle_fragment.xml" value="0.10739102969046115" />
+        <entry key="..\:/Users/ZeroX/AndroidStudioProjects/EjercicioActividad12_Consolidacin/app/src/main/res/layout/fragment_detalle_fragment.xml" value="0.25" />
         <entry key="..\:/Users/ZeroX/AndroidStudioProjects/EjercicioActividad12_Consolidacin/app/src/main/res/layout/fragment_favorito.xml" value="0.1" />
         <entry key="..\:/Users/ZeroX/AndroidStudioProjects/EjercicioActividad12_Consolidacin/app/src/main/res/layout/fragment_listar.xml" value="0.1921875" />
-        <entry key="..\:/Users/ZeroX/AndroidStudioProjects/EjercicioActividad12_Consolidacin/app/src/main/res/layout/item_recyclerview.xml" value="0.75" />
+        <entry key="..\:/Users/ZeroX/AndroidStudioProjects/EjercicioActividad12_Consolidacin/app/src/main/res/layout/item_recyclerview.xml" value="0.3382218148487626" />
       </map>
     </option>
   </component>

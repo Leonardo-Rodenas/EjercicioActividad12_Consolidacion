@@ -20,13 +20,16 @@ class AdaptadorRV() : RecyclerView.Adapter<AdaptadorRV.CustomViewHolder>() {
     ) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bindData(img: SismosModel) {
-            //Picasso.get().load(img.img_src).into(binding.ivMapa)
+        fun bindData(sismo: SismosModel) {
 
-            Picasso.get().load(img.mapa).fit().centerCrop()
+            binding.tvHoraLocal.text = sismo.horaLocal.toString()
+            binding.tvReferencia.text = sismo.referencia.toString()
+
+            Picasso.get().load(sismo.mapa).fit().centerCrop()
                 .placeholder(R.drawable.user_placeholder)
                 .error(R.drawable.user_placeholder_error)
                 .into(binding.ivMapa)
+
             binding.itemCard.setOnClickListener {
 
                 listener.itemClick(adapterPosition)

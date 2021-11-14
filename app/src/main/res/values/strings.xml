@@ -7,5 +7,12 @@
     <string name="mapa">Mapa:  </string>
     <string name="favorito">Favorito  </string>
     <string name="titulo">Últimos Sismos en Chile</string>
+    <string name="latitud">Latitud:</string>
+    <string name="longitud">Longitud:</string>
+    <string name="produnfidad">Profundidad:</string>
+
+    <string name="contDescrip"></string>
+
+
 
 </resources>

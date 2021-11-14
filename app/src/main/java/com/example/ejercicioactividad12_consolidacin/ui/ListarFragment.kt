@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.get
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,12 +15,13 @@ import com.example.ejercicioactividad12_consolidacin.adapter.AdaptadorRV
 import com.example.ejercicioactividad12_consolidacin.databinding.FragmentListarBinding
 import com.example.ejercicioactividad12_consolidacin.viewmodel.Factory
 import com.example.ejercicioactividad12_consolidacin.viewmodel.SismosViewModel
+import java.io.Serializable
 
 class ListarFragment : Fragment() {
 
     private var _binding: FragmentListarBinding? = null
     private val binding get() = _binding!!
-    private lateinit var vmodel:SismosViewModel
+    private lateinit var vmodel: SismosViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,6 +29,9 @@ class ListarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentListarBinding.inflate(inflater, container, false)
+
+        binding.progressBarr.visibility = View.VISIBLE
+        binding.rvSismos.visibility = View.GONE
 
         vmodel = Factory(requireActivity().application).create(SismosViewModel::class.java)
 
@@ -45,8 +50,10 @@ class ListarFragment : Fragment() {
                 override fun itemClick(position: Int) {
                     //hey listen!!! poner acá lo que quiero que haga al clickear
 
-
-
+                /*    var sismo = binding.rvSismos.adapter
+                    adapter.getItemViewType(position)
+                    var miBundle = Bundle()
+                    miBundle.putSerializable(sismo)*/
 
                     findNavController().navigate(R.id.action_listarFragment_to_detalleFragmentFragment)
                 }
@@ -58,7 +65,11 @@ class ListarFragment : Fragment() {
             Log.d("RecyclerViewImagenes", it.toString())
             adapter.setSismos(it)
 
+            binding.progressBarr.visibility = View.GONE
+            binding.rvSismos.visibility = View.VISIBLE
+
         })
         return binding.root
     }
+
 }

@@ -51,7 +51,6 @@ class ListarFragment : Fragment() {
                 override fun itemClick(position: Int, sismoModelo : SismosModel) {
                     //lo que quiero que haga al clickear
 
-
                     var miBundle = Bundle()
                     miBundle.putSerializable("horaSismo", sismoModelo.horaLocal)
                     miBundle.putSerializable("latitudSismo", sismoModelo.latitud)
@@ -65,6 +64,8 @@ class ListarFragment : Fragment() {
                 }
             })
         }
+
+
 
         vmodel.exponeSismosDeDB().observe(viewLifecycleOwner, Observer {
 

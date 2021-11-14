@@ -3,6 +3,7 @@ package com.example.ejercicioactividad12_consolidacin.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ejercicioactividad12_consolidacin.R
 import com.example.ejercicioactividad12_consolidacin.databinding.ItemRecyclerviewBinding
@@ -33,6 +34,7 @@ class AdaptadorRV() : RecyclerView.Adapter<AdaptadorRV.CustomViewHolder>() {
             binding.itemCard.setOnClickListener {
 
                 listener.itemClick(adapterPosition, sismo)
+
 
             }
 
@@ -65,7 +67,7 @@ class AdaptadorRV() : RecyclerView.Adapter<AdaptadorRV.CustomViewHolder>() {
 
     interface alClickearItemRV {
 
-        fun itemClick(position: Int, sismoModelo : SismosModel)
+        fun itemClick(position: Int, sismoModelo: SismosModel)
 
     }
 

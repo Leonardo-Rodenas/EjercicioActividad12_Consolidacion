@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.ejercicioactividad12_consolidacin.R
 import com.example.ejercicioactividad12_consolidacin.databinding.FragmentDetalleFragmentBinding
 import com.example.ejercicioactividad12_consolidacin.viewmodel.Factory
@@ -46,6 +47,17 @@ class DetalleFragmentFragment : Fragment() {
             .error(R.drawable.user_placeholder_error)
             .into(binding.ivMapaDetalle)
 
+        binding.checkboxFavorito.setOnCheckedChangeListener { buttonView, isChecked ->
+
+            if (isChecked){
+                Toast.makeText(context, "Sismo agregado a favoritos", Toast.LENGTH_SHORT).show()
+                vmodel
+            }else{
+                vmodel.borraSismosFavoritosDeDB()
+                Toast.makeText(context, "Sismo quitado de favoritos", Toast.LENGTH_SHORT).show()
+            }
+
+        }
 
         return binding.root
     }

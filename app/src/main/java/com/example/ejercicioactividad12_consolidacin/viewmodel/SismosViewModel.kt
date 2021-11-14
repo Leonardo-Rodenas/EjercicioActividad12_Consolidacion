@@ -31,6 +31,7 @@ class SismosViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     fun cambiaeEstadoDeFavorito(sismo: SismosModel) {
+
         repositorio.cambiaeEstadoDeFavorito(sismo)
     }
 

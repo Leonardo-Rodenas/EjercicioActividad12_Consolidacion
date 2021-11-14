@@ -13,6 +13,14 @@
         <action
             android:id="@+id/action_listarFragment_to_detalleFragmentFragment"
             app:destination="@id/detalleFragmentFragment" />
+        <argument
+            android:name="horaLocal"
+            app:argType="string"
+            android:defaultValue="hora" />
+        <argument
+            android:name="latitud"
+            app:argType="string"
+            android:defaultValue="latitud" />
     </fragment>
     <fragment
         android:id="@+id/detalleFragmentFragment"

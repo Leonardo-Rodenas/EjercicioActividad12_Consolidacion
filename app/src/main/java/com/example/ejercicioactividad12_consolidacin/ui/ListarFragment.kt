@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ejercicioactividad12_consolidacin.R
 import com.example.ejercicioactividad12_consolidacin.adapter.AdaptadorRV
 import com.example.ejercicioactividad12_consolidacin.databinding.FragmentListarBinding
+import com.example.ejercicioactividad12_consolidacin.model.SismosModel
 import com.example.ejercicioactividad12_consolidacin.viewmodel.Factory
 import com.example.ejercicioactividad12_consolidacin.viewmodel.SismosViewModel
 import java.io.Serializable
@@ -47,15 +48,20 @@ class ListarFragment : Fragment() {
             vmodel.traemeLoDelServer()
 
             adapter.setearListener(object : AdaptadorRV.alClickearItemRV {
-                override fun itemClick(position: Int) {
-                    //hey listen!!! poner acá lo que quiero que haga al clickear
+                override fun itemClick(position: Int, sismoModelo : SismosModel) {
+                    //lo que quiero que haga al clickear
 
-                /*    var sismo = binding.rvSismos.adapter
-                    adapter.getItemViewType(position)
+
                     var miBundle = Bundle()
-                    miBundle.putSerializable(sismo)*/
+                    miBundle.putSerializable("horaSismo", sismoModelo.horaLocal)
+                    miBundle.putSerializable("latitudSismo", sismoModelo.latitud)
+                    miBundle.putSerializable("longitudSismo", sismoModelo.longitud)
+                    miBundle.putSerializable("profundidadSismo", sismoModelo.profundidad)
+                    miBundle.putSerializable("magnitudSismo", sismoModelo.magnitud)
+                    miBundle.putSerializable("referenciaSismo", sismoModelo.referencia)
+                    miBundle.putSerializable("mapaSismo", sismoModelo.mapa)
 
-                    findNavController().navigate(R.id.action_listarFragment_to_detalleFragmentFragment)
+                    findNavController().navigate(R.id.action_listarFragment_to_detalleFragmentFragment, miBundle)
                 }
             })
         }

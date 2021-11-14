@@ -32,7 +32,7 @@ class AdaptadorRV() : RecyclerView.Adapter<AdaptadorRV.CustomViewHolder>() {
 
             binding.itemCard.setOnClickListener {
 
-                listener.itemClick(adapterPosition)
+                listener.itemClick(adapterPosition, sismo)
 
             }
 
@@ -65,7 +65,7 @@ class AdaptadorRV() : RecyclerView.Adapter<AdaptadorRV.CustomViewHolder>() {
 
     interface alClickearItemRV {
 
-        fun itemClick(position: Int)
+        fun itemClick(position: Int, sismoModelo : SismosModel)
 
     }
 

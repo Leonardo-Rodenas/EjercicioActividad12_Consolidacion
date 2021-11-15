@@ -52,7 +52,14 @@ class SismosRepositorio(private val sismosDao: SismoDao) {
 
     //este cambia el estado de si es favorito o no, pero tendria que cambiarlo acá no? o en el viewmodel?
     fun cambiaeEstadoDeFavorito(sismo:SismosModel){
-        sismosDao.cambiaEstadoFavorito(sismo)
+
+     /*   if(sismo.favorito.equals(0)){
+            sismo.favorito.
+            sismosDao.cambiaEstadoFavorito(sismo)
+        }else if (sismo.favorito.equals(1)){
+            sismosDao.cambiaEstadoFavorito(sismo)
+        }*/
+
 
     }
 

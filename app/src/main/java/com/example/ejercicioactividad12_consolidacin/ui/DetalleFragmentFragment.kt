@@ -27,6 +27,25 @@ class DetalleFragmentFragment : Fragment() {
 
         vmodel = Factory(requireActivity().application).create(SismosViewModel::class.java)
 
+        recuperoValoresDeListarFragment ()
+
+        binding.checkboxFavorito.setOnCheckedChangeListener { buttonView, isChecked ->
+
+            if (isChecked){
+                Toast.makeText(context, "Sismo agregado a favoritos", Toast.LENGTH_SHORT).show()
+                vmodel
+            }else{
+                vmodel.borraSismosFavoritosDeDB()
+                Toast.makeText(context, "Sismo quitado de favoritos", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+        return binding.root
+    }
+
+    fun recuperoValoresDeListarFragment () {
+
         var recuperoHoraSismo = arguments?.getSerializable("horaSismo")
         var recuperoLatitudSismo = arguments?.getSerializable("latitudSismo")
         var recuperoLongitudSismo = arguments?.getSerializable("longitudSismo")
@@ -47,19 +66,6 @@ class DetalleFragmentFragment : Fragment() {
             .error(R.drawable.user_placeholder_error)
             .into(binding.ivMapaDetalle)
 
-        binding.checkboxFavorito.setOnCheckedChangeListener { buttonView, isChecked ->
-
-            if (isChecked){
-                Toast.makeText(context, "Sismo agregado a favoritos", Toast.LENGTH_SHORT).show()
-                vmodel
-            }else{
-                vmodel.borraSismosFavoritosDeDB()
-                Toast.makeText(context, "Sismo quitado de favoritos", Toast.LENGTH_SHORT).show()
-            }
-
-        }
-
-        return binding.root
     }
 
 }

@@ -19,6 +19,6 @@ data class SismosModel(
     val mapa: String,
     val profundidad: String,
     val referencia: String,
-    val favorito: Boolean //agregado por mí para guardar en favorito
+    val favorito: Boolean = false//agregado por mí para guardar en favorito
 
 ) : Serializable
